@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulaire de contact</title>
+        <link rel="stylesheet" href="../style.css" type="text/css" />
+    </head>
+    <body>
+        <div>
+            <p><%= msg %></p> 
+            <p class="contactFormP">Pour plus d'informations ou pour quelconques renseignements, n'hésitez pas à nous envoyer un mail ou à nous contacter par téléphone ou sur Messenger.</p>
+            <div>
+                <form action='envoi' method='POST' id="contactForm">
+                    <label>Prénom</label>
+                        <input 
+                            type='text' 
+                            name="firstname"
+                            required
+                        />
+                    <label>Nom</label>
+                        <input 
+                            type='text' 
+                            name="lastname"
+                            required
+                        />
+                    <label>Email</label>
+                        <input 
+                            type='email' 
+                            name="email"
+                            required
+                        />
+                    <label>Numéro de téléphone</label>
+                        <input 
+                            type='tel' 
+                            name="phone"
+                            required
+                        />
+                    <label for="subject">Sujet</label>
+                        <input 
+                            type="text"
+                            name="subject"
+                            required
+                        />
+                    <label>Message</label>
+                    <textarea 
+                        name="message"
+                        required
+                    >
+                    </textarea>
+                    <button type="submit" class="contactSubmit">Envoyer</button>
+                    <div class="linksForms">
+                        <p><a href="http://localhost:3000/oublie"><span>Mot de passe oublié ?</span></a></p>
+                        <p><a href="http://localhost:3000/enregistrement"><span>Pas encore enregistré ?</span></a></p>
+                        <p><a href="http://localhost:3000"><span>Retour à l'accueil</span></a></p>
+                    </div>
+                </form>
+        </div>
+    </body>
+    <style type="text/css">
+
+        @font-face {
+            font-family: "source_code_pro";
+            src: url("./assets/fonts/source_code_pro/SourceCodePro-Regular.ttf");
+        }
+
+        @font-face {
+            font-family: "Anton";
+            src: url("./assets/fonts/Anton/Anton-Regular.ttf");
+        }
+
+        #contactForm{
+            display: flex;
+            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+            "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+            "Helvetica Neue", sans-serif;
+            justify-content: space-between;
+            height: 80vh;
+            font-size: 28px;
+        }
+
+        #contactForm button {
+            width: 20%;
+            font-size: 1.4em;
+        }
+
+        #contactFormH2 {
+            margin-left: 5%;
+        }
+
+        #contactForm {
+            background-color: #c88510;
+            margin-top: 45px;
+            text-align: left;
+        }
+
+        #contactForm input {
+            background-color: transparent;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: solid #000 1px;
+            color: #fff;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #contactForm textarea {
+            background-color: transparent;
+            border: solid #000 1px;
+            color: #fff;
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 100px;
+        }
+
+        #contactForm label {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .contactSubmit {
+            margin-bottom: 20px;
+            background-color: transparent;
+            border: solid #000 1px;
+            color: #000;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .contactSubmit:hover {
+            margin-bottom: 20px;
+            background-color: #000;
+            border: solid #000 1px;
+            color: #fff;
+        }
+
+        #contactForm .linksForms p a {
+            color: #013368;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        #contactForm .linksForms {
+            text-align: center;
+            padding-top: 75px;
+            background-color: #fff;
+        }
+
+        #contactForm h2 {
+            background-color: #fff;
+            text-align: center;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .contactFormP {
+            font-size: 1.7em;
+            text-align: center;
+            color: #c88510;
+            font-weight: 900;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        
+        #contactForm .linksForms a {
+            color: #013368;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        #contactForm .linksForms {
+            padding-top: 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+    </style>
+</html>

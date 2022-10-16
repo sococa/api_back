@@ -1,0 +1,11 @@
+<div>
+    <p>Tapez votre nouveau mot de passe 2 fois</p>
+    <% if(msg !== null) { %>
+        <p><%=msg%></p>
+    <% } %>
+   <form action="/changePassword/<%=key_id%>" method="POST">
+        <input required type="text" name="password1" placeholder="mot de passe"/>
+        <input required type="text" name="password2"  placeholder="entrez votre mot de passe à nouveau"/>
+        <input type="submit" value="envoyer" />
+    </form> 
+</div>
